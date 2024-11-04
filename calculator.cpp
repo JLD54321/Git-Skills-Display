@@ -23,6 +23,15 @@ int main (int argc, char* argv[])
         int quotient = divide(stoi(argv[2]), stoi(argv[3]));
         cout << "The quotient of " << argv[2] << " and " << argv[3] << " is " << quotient << endl;
     }
+    else if (strcmp(argv[1], "multiply") == 0)
+    {
+        int product = multiply(stoi(argv[2]), stoi(argv[3]));
+        cout << "The product of " << argv[2] << " and " << argv[3] << " is " << product << endl;
+    }
+    else
+    {
+        cout << "Invalid operation. Valid operations include: add, subtract, divide, multiply." << endl;
+    }
     return 0;
 }
 
@@ -48,4 +57,12 @@ int divide (int num1, int num2)
     int quotient = num1 / num2;
 
     return quotient;
+}
+
+/* function that multiplies 2 numbers */
+int multiply (int num1, int num2)
+{
+    int product = num1 * num2;
+
+    return product;
 }
