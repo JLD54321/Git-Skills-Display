@@ -13,7 +13,12 @@ int main (int argc, char* argv[])
         int sum = add(stoi(argv[2]), stoi(argv[3]));
         cout << "The sum of " << argv[2] << " and " << argv[3] << " is " << sum << endl;
     }
-return 0;
+    else if (strcmp(argv[1], "subtract") == 0)
+    {
+        int difference = subtract(stoi(argv[2]), stoi(argv[3]));
+        cout << "The difference of " << argv[2] << " and " << argv[3] << " is " << difference << endl;
+    }
+    return 0;
 }
 
 /* function that adds 2 numbers */
@@ -22,4 +27,12 @@ int add (int num1, int num2)
     int sum = num1 + num2;
 
     return sum;
+}
+
+/* function that adds 2 numbers */
+int subtract (int num1, int num2)
+{
+    int difference = num1 - num2;
+
+    return difference;
 }
